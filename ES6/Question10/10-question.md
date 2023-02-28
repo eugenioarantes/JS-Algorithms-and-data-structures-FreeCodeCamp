@@ -1,19 +1,13 @@
-## Use Destructuring Assignment to Assign Variables from Nested Objects
+## Use Destructuring Assignment to Assign Variables from Objects
 
-You can use the same principles from the previous two lessons to destructure values from nested objects.
+Destructuring allows you to assign a new variable name when extracting values. You can do this by putting the new name after a colon when assigning the value.
 
-Using an object similar to previous examples:
+Using the same object from the last example:
 
-const user = {
-  johnDoe: { 
-    age: 34,
-    email: 'johnDoe@freeCodeCamp.com'
-  }
-};
-Here's how to extract the values of object properties and assign them to variables with the same name:
+const user = { name: 'John Doe', age: 34 };
+Here's how you can give new variable names in the assignment:
 
-const { johnDoe: { age, email }} = user;
-And here's how you can assign an object properties' values to variables with different names:
+const { name: userName, age: userAge } = user;
+You may read it as "get the value of user.name and assign it to a new variable named userName" and so on. The value of userName would be the string John Doe, and the value of userAge would be the number 34.
 
-const { johnDoe: { age: userAge, email: userEmail }} = user;
-Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values of today.low and today.high from the LOCAL_FORECAST object.
+Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables highToday and highTomorrow the values of today and tomorrow from the HIGH_TEMPERATURES object.
